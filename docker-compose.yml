@@ -9,9 +9,7 @@ services:
       - ./Caddyfile:/etc/Caddyfile
       - ./.caddy:/root/.caddy
   icecast:
-  build: .
-    volumes:
-      - /etc/localtime:/etc/localtime:ro
+    build: .
     environment:
       - ICECAST_SOURCE_PASSWORD
       - ICECAST_ADMIN_PASSWORD
@@ -20,12 +18,11 @@ services:
     ports:
       - 8000:8000
   liquidsoap:
-    image: moul/liquidsoap:latest
+    image: theolll/liquidsoap:latest
     command: liquidsoap -v --debug /liquidsoap/liquidsoap.liq
     user: liquidsoap
     volumes:
       - ./liquidsoap:/liquidsoap
-      - /etc/localtime:/etc/localtime:ro
     ports:
       - 8800:8800
     links:
