@@ -8,6 +8,9 @@ services:
     volumes:
       - ./Caddyfile:/etc/Caddyfile
       - ./.caddy:/root/.caddy
+    environment:
+      - PROXY_HOST
+      - PROXY_EMAIL
   icecast:
     build: .
     environment:

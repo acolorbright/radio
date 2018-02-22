@@ -1,8 +1,8 @@
-<yourdomain> {
+{$PROXY_HOST} {
   proxy / icecast:8000 {
     transparent
     policy round_robin
   }
   timeouts 0
-  tls your@email.com
+  tls {$PROXY_EMAIL}
 }
