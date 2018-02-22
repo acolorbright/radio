@@ -25,6 +25,8 @@ ICECAST_RELAY_PASSWORD=somethingsecret
 ICECAST_HOST=icecast
 ICECAST_PORT=8000
 PLAYLIST_URI=example-playlist-uri.example
+PROXY_HOST=yourstreamurl.com
+PROXY_EMAIL=your@email.com
 ```
 
 ## Deployment
